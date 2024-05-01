@@ -79,21 +79,11 @@ def analyze_and_plot():
 # Создание главного окна Tkinter
 root = tk.Tk()
 root.title("Asota Trade")
-#root.geometry('640x360')
-#root.resizable(width=False, height=False)
-
-'''# Добавление фонового изображения
-root.image = tk.PhotoImage(file='bg2.png')
-bg_logo = tk.Label(root, image=root.image)
-bg_logo.place(x=0, y=0, relwidth=1, relheight=1)'''
-
 
 bg_color = '#0a0130'
 fg_color = '#05c1ff'
 font_base = ('Helvetica', 12, 'bold')
 
-
-# Создание рамки для размещения виджетов
 # Создание фрейма для размещения виджетов
 frame = tk.Frame(root, bg=bg_color)
 frame.grid(row=0, column=0, padx=60, pady=0)
@@ -120,9 +110,6 @@ interval_combobox.current(0)
 button = tk.Button(frame, text="Анализировать и построить график", command=analyze_and_plot, bg=bg_color, highlightthickness=0, font=font_base, fg=fg_color)
 button.grid(row=3, columnspan=2, pady=10)
 
-'''predict_label1 = Label(frame, text='Рекомендация: ', bg=bg_color, fg=fg_color, font=font_base).grid(row=4, column=0,pady=10)
-predict_label2 = Label(frame, text='~цена в будущем: ', bg=bg_color, fg=fg_color, font=font_base).grid(row=5, column=0,pady=10)
-'''
 # Поднимаем рамку с виджетами на передний план
 frame.lift()
 
